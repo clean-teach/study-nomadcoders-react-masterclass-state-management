@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import TodoList from './TodoList';
+import ToDoList from './components/ToDoList';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
@@ -67,7 +67,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <TodoList />
+      <ToDoList />
     </>
   );
 }
