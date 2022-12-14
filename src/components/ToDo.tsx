@@ -9,10 +9,14 @@ function ToDo({ text, category, id }: IToDo) {
     } = event;
     setToDos((oldTodos) => {
       const textIndex = oldTodos.findIndex((toDo) => toDo.id === id);
-      const oldTodo = oldTodos[textIndex];
-      const newToDo = { text, id, category: name };
-      console.log(oldTodos, textIndex, oldTodo, newToDo);
-      return oldTodos;
+      //   const oldTodo = oldTodos[textIndex];
+      const newToDo = { text, id, category: name as any };
+      //   console.log(oldTodos, textIndex, oldTodo, newToDo);
+      return [
+        ...oldTodos.slice(0, textIndex),
+        newToDo,
+        ...oldTodos.slice(textIndex),
+      ];
     });
   };
   return (
