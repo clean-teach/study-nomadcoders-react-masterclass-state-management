@@ -8,14 +8,14 @@ function ToDo({ text, category, id }: IToDo) {
       currentTarget: { name },
     } = event;
     setToDos((oldTodos) => {
-      const textIndex = oldTodos.findIndex((toDo) => toDo.id === id);
-      //   const oldTodo = oldTodos[textIndex];
+      const targetIndex = oldTodos.findIndex((toDo) => toDo.id === id);
+      //   const oldTodo = oldTodos[targetIndex];
       const newToDo = { text, id, category: name as any };
-      //   console.log(oldTodos, textIndex, oldTodo, newToDo);
+      //   console.log(oldTodos, targetIndex, oldTodo, newToDo);
       return [
-        ...oldTodos.slice(0, textIndex),
+        ...oldTodos.slice(0, targetIndex),
         newToDo,
-        ...oldTodos.slice(textIndex),
+        ...oldTodos.slice(targetIndex + 1),
       ];
     });
   };
