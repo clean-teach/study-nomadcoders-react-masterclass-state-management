@@ -18,14 +18,17 @@ function CreateToDo() {
     setValue('toDo', '');
   };
   return (
-    <form onSubmit={handleSubmit(handleValid)}>
-      <input
-        type="text"
-        placeholder="Write a to do"
-        {...register('toDo', { required: 'Please write a To Do' })}
-      />
-      <button>Add</button>
-    </form>
+    <>
+      <h2>Create To do</h2>
+      <form onSubmit={handleSubmit(handleValid)}>
+        <input
+          type="text"
+          placeholder="Write a to do"
+          {...register('toDo', { required: 'Please write a To Do' })}
+        />
+        <button>Add</button>
+      </form>
+    </>
   );
 }
 

@@ -61,6 +61,7 @@ a {
 * {
   box-sizing: border-box;
 }
+button {cursor: pointer;}
 `;
 
 function App() {
