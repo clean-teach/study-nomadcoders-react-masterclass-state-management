@@ -29,7 +29,7 @@ function Category() {
       );
     }
     setCategories((currentCategories) => {
-      console.log(currentCategories);
+      // console.log(currentCategories);
       return [...currentCategories, { category: newCategory, id: Date.now() }];
     });
     setValue('newCategory', '');
